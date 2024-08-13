@@ -10,6 +10,13 @@ namespace InterfaceExercise02
     {
         static void Main(string[] args)
         {
+            IClown fingersTheClown = new ScaryScary("big red nose", 14);
+            fingersTheClown.Honk();
+            IScaryClown iScaryClownReference = (IScaryClown)fingersTheClown;
+            iScaryClownReference.ScareLittleChildren();
+            // or
+            if (fingersTheClown is IScaryClown iScaryClown)
+                iScaryClown.ScareLittleChildren();            
         }
     }
 }
