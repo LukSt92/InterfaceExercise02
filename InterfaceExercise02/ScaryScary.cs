@@ -12,7 +12,7 @@ namespace InterfaceExercise02
         {
             this.scaryThingCount = scaryThingCount;
         }
-        private int scaryThingCount;
+        private readonly int scaryThingCount;
         public string ScaryThingIHave { get { return scaryThingCount + " spiders"; } }
         public void ScareLittleChildren()
         {

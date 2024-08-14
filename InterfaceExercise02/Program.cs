@@ -10,13 +10,15 @@ namespace InterfaceExercise02
     {
         static void Main(string[] args)
         {
+            IClown.CarCapacity = 18;
+            Console.WriteLine(IClown.ClownCarDescription());
             IClown fingersTheClown = new ScaryScary("big red nose", 14);
             fingersTheClown.Honk();
-            IScaryClown iScaryClownReference = (IScaryClown)fingersTheClown;
-            iScaryClownReference.ScareLittleChildren();
+/*            IScaryClown iScaryClownReference = (IScaryClown)fingersTheClown;
+            iScaryClownReference.ScareLittleChildren();*/
             // or
             if (fingersTheClown is IScaryClown iScaryClown)
-                iScaryClown.ScareLittleChildren();            
+                iScaryClown.ScareAdults();            
         }
     }
 }
